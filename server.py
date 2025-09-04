@@ -9,7 +9,11 @@ def a(x):
 
 @app.route('/')
 def index():
-    return 'hello'
+    return '''
+    <h1>안녕하세요</h1>
+    저는 김강입니다.
+
+    '''
 
 @app.route('/read/<id>/')
 def read(id):
