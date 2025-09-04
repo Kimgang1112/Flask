@@ -6,4 +6,8 @@ app = Flask(__name__)
 def index():
     return 'hello'
 
-app.run(debug=True)
+@app.route('/read/<id>/')
+def read(id):
+    return f'read {id}'
+
+app.run(port=5001,debug=True)
