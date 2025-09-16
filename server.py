@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
 
 app = Flask(__name__)
 
@@ -18,6 +18,6 @@ def index():
 @app.route('/read/<id>/')
 def read(id):
 
-    return str(a(id))
+    return redirect(url_for('index'))
 
 app.run(port=5001,debug=True)
